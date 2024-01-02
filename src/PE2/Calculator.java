@@ -1,5 +1,5 @@
 package PE2;
-import java.util.*;
+import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
