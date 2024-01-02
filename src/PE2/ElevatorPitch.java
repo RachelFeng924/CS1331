@@ -1,8 +1,13 @@
+package PE2;
+
+import java.util.Scanner;
+
 class ElevatorPitch {
     public static void main(String[] args) {
+
         String myPitch;
         String name;
-        float gpa;
+        double gpa;
         int graduationYear;
         String hobby;
         String major;
@@ -17,6 +22,7 @@ class ElevatorPitch {
 
         System.out.println("Enter the year you will graduate: ");
         graduationYear = myScanner.nextInt();
+        myScanner.nextLine();
 
         System.out.println("Enter your favorite hobby: ");
         hobby = myScanner.nextLine();
@@ -24,6 +30,10 @@ class ElevatorPitch {
         System.out.println("Enter your major: ");
         major = myScanner.nextLine();
 
+        myPitch = "Hello, my name is " + name + ". I’m a " + major + " major with a gpa of " + gpa +
+                " graduating in " + graduationYear + ". In my free time, I like " + hobby + ".";
+
+        System.out.println(myPitch);
 
     }
 }
