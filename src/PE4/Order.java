@@ -1,7 +1,10 @@
 package PE4;
 
-public class Order {
-    public static void main(String[] args) {
-        System.out.println("hi");
-    }
+public enum Order {
+    LATTE,
+    COFFEE,
+    ICED_COFFEE,
+    FRAPPE,
+    PASTRY
+
 }
