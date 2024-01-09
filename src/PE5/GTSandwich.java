@@ -50,7 +50,7 @@ public class GTSandwich {
         return numMeat;
     }
     public double getPrice() {
-        return (double)(Math.round(price*100)/100.00);
+        return (Math.round(price*100)/100.00);
     }
     public boolean getHasSauce() {
         return hasSauce;
@@ -80,14 +80,14 @@ public class GTSandwich {
     }
     public void setMakeCombo(boolean c) {
         if (c && !this.getMakeCombo()){
-            this.setPrice(this.getPrice() + 2.00);
+            price += 2.00;
         }
 
         if (!c && this.getMakeCombo()) {
-            this.setPrice(this.getPrice() - 2.00);
+            price -= 2.00;
         }
 
-        this.setMakeCombo(c);
+        makeCombo = c;
     }
     public void applyCoupon(String code) {
         if (code.equals("CS1331") && this.getMakeCombo()) {
@@ -142,7 +142,6 @@ public class GTSandwich {
         houseSpecial.applyCoupon("CS1331");
         javaSandwich.applyCoupon();
         houseSpecial.printExtras();
-
         System.out.println(houseSpecial);
         System.out.println(javaSandwich);
 
