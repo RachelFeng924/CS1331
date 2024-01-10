@@ -11,15 +11,7 @@ public class GTSandwich {
     private boolean makeCombo;
 
     //CONSTRUCTORS
-    public GTSandwich() {
-        bread = "Rye";
-        meat = "Turkey";
-        extras = new String[] {};
-        numMeat = 4;
-        price = 8.75;
-        hasSauce = true;
-        makeCombo = true;
-    }
+
     public GTSandwich(String b, String m, String[] e, int n, double p, boolean s, boolean c) {
         bread = b;
         meat = m;
@@ -29,11 +21,12 @@ public class GTSandwich {
         hasSauce = s;
         makeCombo = c;
     }
+    public GTSandwich() {
+        this("Rye", "Turkey", new String[] {}, 4, 8.75, true, true);
+    }
+
     public GTSandwich(String b, String m, boolean c) {
-        this();
-        bread = b;
-        meat = m;
-        makeCombo = c;
+        this(b, m, new String[] {}, 4, 8.75, true, c);
     }
 
     //GETTERS
